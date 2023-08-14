@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BoardContextProvider } from './context/BoardContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BoardContextProvider>
+     <App/>
+    </BoardContextProvider>
   </React.StrictMode>
 );
 
